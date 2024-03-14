@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 
 import styles from './ContactForm.module.css';
-import { addContact } from '../../redux/contacts/contactsSlice';
+import { addContact } from '../../redux/contacts/contactsOps';
 import { selectContacts } from '../../redux/contacts/selectors';
 
 const ContactForm = () => {

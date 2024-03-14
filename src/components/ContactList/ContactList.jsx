@@ -2,7 +2,6 @@ import { useSelector } from 'react-redux';
 
 import { selectContacts } from '../../redux/contacts/selectors';
 import { selectFilter } from '../../redux/filter/selectors';
-import { deleteContact } from '../../redux/contacts/contactsSlice';
 import Contact from '../Contact/Contact';
 
 import styles from './ContactList.module.css';
@@ -21,12 +20,7 @@ const ContactList = () => {
       <ul className={styles.list}>
         {getVisibleContacts().map(({ name, number, id }) => (
           <li className={styles.item} key={id}>
-            <Contact
-              name={name}
-              number={number}
-              id={id}
-              deleteContact={deleteContact}
-            />
+            <Contact name={name} number={number} id={id} />
           </li>
         ))}
       </ul>
